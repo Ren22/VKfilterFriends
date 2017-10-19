@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FriendsFilter</title>
+    <link href="./src/css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="main-container">
+    <table>
+        <tr><td><input type="text" class="lft_inpt" name="name_search"></td>
+            <td><input type="text" class="rght_inpt" name="name_search"></td>
+        </tr>
+        <tr><td class="friends"><ul class="friends-left"></ul></td>
+            <td class="friends"><ul class="friends-right droppable"></ul></td>
+        </tr>
+        <tr><td><button name ="user_lists" class="save_users">Сохранить</button></td></tr>
+    </table>
+</div>
+<script src="https://vk.com/js/api/openapi.js?146" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+<script src="./src/js/dndFriends.js"></script>
+</body>
+</html>

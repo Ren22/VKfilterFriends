@@ -1,0 +1,93 @@
+.main-container{
+    /*display: flex;*/
+}
+
+.friends {
+    width: 400px;
+    outline: 1px solid red;
+    height: 500px;
+    overflow-y: scroll;
+}
+
+ul {
+    width: 400px;
+    height: 500px; /* если задать div-у сверху то выйдет за границы */
+    overflow-y: scroll;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    outline: 1px solid red;
+}
+
+ul li {
+    display: inline-block;
+    position: relative;
+    border: 1px solid lightgrey;
+    width: inherit;
+}
+
+.photo {
+    float: left;
+}
+
+.add_remove_left {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    width: 20px;
+    height:20px;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.add_remove_left::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    z-index: -1;
+
+    border: 2px solid red;
+}
+
+.add_remove_left::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 8px;
+    height: 15px;
+    z-index: -1;
+
+    border: 2px solid red;
+}
+
+.add_remove_right::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transform: rotate(45deg);
+    right: 15px;
+    width: 15px;
+    cursor: pointer;
+    border: 2px solid red;
+}
+
+.add_remove_right::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transform: rotate(-45deg);
+    right: 15px;
+    width: 15px;
+    cursor: pointer;
+    border: 2px solid red;
+}
+
+table {
+    border-collapse: collapse;
+}
